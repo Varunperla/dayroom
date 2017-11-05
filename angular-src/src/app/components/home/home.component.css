@@ -1,0 +1,56 @@
+/*brand speaking*/
+.Brand-speaking{
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
+
+
+
+/*Booking entry*/
+.guestNumber-dropdown{
+  background-color: white;
+  color: #868E95;
+  border-color: #CED4DA ;
+  width: 250px;
+  text-align: left;
+}
+
+.booking-entry{
+  padding-bottom: 100px;
+}
+
+
+/*USP section*/
+.usp-icons{
+  color: red;
+  font-size: 30px;
+}
+
+.usp-row{
+  padding-bottom: 120px;
+}
+
+
+/*DAYROOMS showcase*/
+
+.card {
+  border: none;
+  box-shadow: none;
+}
+
+.card-deck{
+  padding-bottom: 30px;
+}
+
+
+/*Footer*/
+.footer{
+  background-color: whitesmoke;
+  padding: 100px;
+}
+
+
+/*.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {*/
+  /*color: red;*/
+  /*background-color: white !important;*/
+/*}*/

@@ -1,0 +1,19 @@
+.modal-content {border-radius: 0;box-shadow: none;}
+.modal-header {border-bottom: 1px solid #F2F2F2;}
+.modal-body {padding: 30px 15px;}
+.form .button {width: 100%; margin: 15px 0; padding: 10px 0; border: none;}
+
+.form .button.primary {color: #fff; background-color: #22E094; margin: 0 0 15px 0;}
+.form .button.primary:hover {color: #fff; background-color: #22d68e;}
+.form .button.facebook {color: #fff; background-color: #4267b2;}
+.form .button.facebook:hover {color: #fff; background-color: #3f62a8;}
+.form .button.twitter {color: #fff; background-color: #1da1f2;}
+.form .button.twitter:hover {color: #fff; background-color: #199ae5;}
+
+.form .form-control {margin: 0 0 30px 0; box-shadow: none; background: #F2F2F2; border: none; border-radius: 0;}
+.form .labelRight{float: right; cursor: pointer;}
+.form .control-label {margin: 0 0 10px 0;}
+.form .control-label a {color: #4267b2;}
+.form .control-label a:hover {color: #1da1f2; text-decoration: none;}
+
+.form p {text-align: center;}

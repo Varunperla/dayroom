@@ -1,0 +1,12 @@
+.nav-item:hover{
+  text-decoration: underline;
+}
+
+.navbar{
+  background-color: white;
+  /*box-shadow: 0 0 5px black;*/
+}
+
+.navbar-link{
+  color: #007BFF;
+}

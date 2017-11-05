@@ -1,0 +1,34 @@
+/*brand speaking*/
+
+.Brand-speaking{
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+/*Reach us*/
+
+.reach-us-banner{
+  text-align: center;
+}
+
+
+.reachus-entry{
+  padding-top: 30px;
+}
+
+.reachus-submit{
+  text-align: center;
+  padding-top: 40px;
+}
+
+
+
+
+
+
+
+/*Footer*/
+.footer{
+  background-color: whitesmoke;
+  padding: 100px;
+}
