@@ -16,7 +16,7 @@
 }
 
 .booking-entry{
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 
@@ -27,7 +27,15 @@
 }
 
 .usp-row{
-  padding-bottom: 120px;
+  padding-bottom: 60px;
+}
+
+.possibilities:hover{
+  text-decoration: underline;
+}
+
+.usp-row-3{
+  padding-bottom: 30px;
 }
 
 

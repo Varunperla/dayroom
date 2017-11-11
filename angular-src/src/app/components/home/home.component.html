@@ -1,45 +1,41 @@
 <main role="main" class="container">
 
+
   <div class="container">
     <div class="Brand-speaking">
-      <h1 style="color: red"><strong>Dayroom</strong>.com</h1>
-      <h2>Book awesome hotel rooms for few hours at huge discounts <strong style="color: red">:)</strong></h2>
+      <h1 style="color: red"><strong>Shortspell</strong>.in</h1>
+      <h2 style="font-weight: 200">Book luxury hotel rooms for <span style="color: red">few</span>  hours at huge discounts <strong style="color: red">:)</strong></h2>
     </div>
   </div>
 
   <div class="row booking-entry">
+    <div class="col-lg-6">
+      <div class="input-group input-group-lg">
+        <input  type="text" class="form-control" id="search_term" placeholder="Where to?" aria-label="Username" aria-describedby="sizing-addon1">
+      </div>
+    </div>
+
     <div class="col-lg-3">
       <div class="input-group input-group-lg">
-        <input type="text" class="form-control" id="search_term" placeholder="Where to?" aria-label="Username" aria-describedby="sizing-addon1">
-      </div>
-    </div>
-
-    <div class="col-lg-3">
-      <div class="input-group input-group-lg">
-        <input type="text" class="form-control" placeholder="On which date?" aria-label="Username" aria-describedby="sizing-addon1">
+        <input type="text" class="form-control" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" placeholder="On which date?" aria-label="Username" aria-describedby="sizing-addon1">
       </div>
     </div>
 
 
-    <div class="col-lg-3">
-      <div class="btn-group">
-        <button class="btn btn-lg dropdown-toggle guestNumber-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          How many?
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">1</a>
-          <a class="dropdown-item" href="#">2</a>
-          <a class="dropdown-item" href="#">3</a>
-        </div>
-      </div>
-    </div>
+    <!--<div class="col-lg-3">-->
+      <!--<input id="changeHourStep" type="number" class="form-control form-control-lg" placeholder="No. of occupants?" [(ngModel)]="hourStep" />-->
+    <!--</div>-->
 
     <div class="col-lg-3">
-      <button type="button" class="btn  btn-outline-danger btn-lg">Search Rooms</button>
-
+      <button type="button" class="btn  btn-outline-danger btn-lg" [routerLink]="['/results']">Search Rooms</button>
     </div>
 
   </div>
+
+
+
+
+
 
   <div class="container usp-row">
     <div class="row features">
@@ -66,6 +62,9 @@
     </div>
   </div>
 
+  <h4 class="possibilities" style="text-align: center; padding-bottom: 80px; color: #007BFF;" [routerLink]="['/possibilities']"> + Why use Shortspell?</h4>
+
+
   <div>
     <h2><strong>DAYROOMS</strong></h2>
     <hr>
@@ -76,8 +75,10 @@
    <div class="card-deck">
     <div class="card col-lg-4">
       <img class="card-img-top" src="../../../assets/bed.jpg" alt="Card image cap">
+      <div>
+      </div>
       <div class="card-body">
-        <h4 class="card-title">Novotel Hitec City</h4>
+        <h4 class="card-title">Novotel Hitec City <ngb-rating style="font-size: 15px" [rate]="5"></ngb-rating></h4>
         <div class="row">
         <p style="font-weight:100; padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a></p>
           <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
@@ -88,7 +89,7 @@
      <div class="card col-lg-4">
        <img class="card-img-top" src="../../../assets/room2.jpg" alt="Card image cap">
        <div class="card-body">
-         <h4 class="card-title">Novotel Hitec City</h4>
+         <h4 class="card-title">Lemon tree Hotel <ngb-rating style="font-size: 15px" [rate]="4"></ngb-rating></h4>
          <div class="row">
            <p style="font-weight:100; padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a></p>
            <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
@@ -99,7 +100,7 @@
      <div class="card col-lg-4">
        <img class="card-img-top" src="../../../assets/room1.jpg" alt="Card image cap">
        <div class="card-body">
-         <h4 class="card-title">Novotel Hitec City</h4>
+         <h4 class="card-title">Novotel Hitec City <ngb-rating style="font-size: 15px" [rate]="5"></ngb-rating></h4>
          <div class="row">
            <p style="font-weight:100; padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a></p>
            <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
@@ -111,42 +112,41 @@
 
     <!--Row2-->
     <div class="row">
-    <div class="card-deck">
-      <div class="card col-lg-4">
-        <img class="card-img-top" src="../../../assets/bed.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Novotel Hitec City</h4>
-          <div class="row">
-            <p style="font-weight:100; padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a></p>
-            <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+      <div class="card-deck">
+        <div class="card col-lg-4">
+          <img class="card-img-top" src="../../../assets/bed.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Novotel Hitec City <ngb-rating style="font-size: 15px" [rate]="5"></ngb-rating></h4>
+            <div class="row">
+              <p style="font-weight:100; padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a></p>
+              <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-lg-4">
+          <img class="card-img-top" src="../../../assets/room2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Lemon tree Hotel <ngb-rating style="font-size: 15px" [rate]="4"></ngb-rating></h4>
+            <div class="row">
+              <p style="font-weight:100; padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a></p>
+              <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-lg-4">
+          <img class="card-img-top" src="../../../assets/room1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Novotel Hitec City <ngb-rating style="font-size: 15px" [rate]="5"></ngb-rating></h4>
+            <div class="row">
+              <p style="font-weight:100; padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a></p>
+              <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="card col-lg-4">
-        <img class="card-img-top" src="../../../assets/room2.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Novotel Hitec City</h4>
-          <div class="row">
-            <p style="font-weight:100; padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a></p>
-            <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card col-lg-4">
-        <img class="card-img-top" src="../../../assets/room1.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Novotel Hitec City</h4>
-          <div class="row">
-            <p style="font-weight:100; padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a></p>
-            <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
   </div>
 
   <div>
@@ -204,7 +204,7 @@
     </div>
 
     <!--row3-->
-    <div class="container usp-row">
+    <div class="container usp-row-3">
       <div class="row features">
         <div class="col-lg-3 text-center">
           <i class="material-icons usp-icons">business_center</i>
@@ -230,11 +230,10 @@
     </div>
 
 
+    <h4 style="text-align: center; padding-bottom: 100px; color: #007BFF;" [routerLink]="['/possibilities']"> + Learn more</h4>
+
+
   </div>
-
-
-
-
 
 
 </main>
