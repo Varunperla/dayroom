@@ -1,0 +1,229 @@
+
+
+<div style="background-color: lightgrey">
+<div class='container'>
+<div style="padding-top: 70px;">
+    <div class="row booking-entry" style="padding-bottom: 15px ">
+      <div class="col-lg-6">
+        <div class="input-group input-group">
+          <input  type="text" class="form-control" id="search_term" placeholder="Where to?" aria-label="Username" aria-describedby="sizing-addon1">
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="input-group input-group">
+          <input type="text" class="form-control" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" placeholder="On which date?" aria-label="Username" aria-describedby="sizing-addon1">
+        </div>
+      </div>
+
+
+      <!--<div class="col-lg-3">-->
+        <!--<input id="changeHourStep" type="number" class="form-control form-control" placeholder="No. of occupants?" [(ngModel)]="hourStep" />-->
+      <!--</div>-->
+
+      <div class="col-lg-3">
+        <button type="button" class="btn  btn-outline-danger btn" [routerLink]="['/results']">Search Rooms</button>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+
+<main role="main" class="container">
+
+<div class="row" style="padding-top: 20px">
+  <div class="col-lg-9">
+    <div class="input-group input-group">
+      <input  type="text" class="form-control" id="search_term" placeholder="Search" aria-label="Username" aria-describedby="sizing-addon1">
+    </div>
+  </div>
+
+  <div class="col-lg-3">
+    <button type="button"  class="btn  btn-outline-danger btn" style="width: 200px" (click)="open(content)">Filters</button>
+  </div>
+</div>
+
+  <!--////Modal-->
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h3 class="modal-title">Filters</h3>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <h5>Sort by</h5>
+
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              Hotel star level: 5 star to 3 star
+          </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          Hotel star level: 3 star to 5 star
+        </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          Price: Low to high
+        </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          Price: High to low
+          </label>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close without filtering</button>
+      <button type="button" class="btn btn-outline-dark" style="width: 200px; color: red;" (click)="c('Close click')">Apply Filter</button>
+    </div>
+  </ng-template>
+
+
+<div class="container" style="padding-top: 40px">
+<div class="row">
+  <div class="card-deck">
+    <div class="card col-lg-6">
+      <img class="card-img-top" src="../../../assets/bed.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">Novotel Hitec City <ngb-rating style="font-size: 20px" [rate]="5"></ngb-rating></h4>
+        <div class="row">
+          <p style="padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a>, you save <span style="color: limegreen">₹4000</span> </p>
+          <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+        </div>
+        <ng-template #t let-fill="fill">
+          <span *ngIf="fill === 100" class="star full">&hearts;</span>
+          <span *ngIf="fill === 0" class="star">&hearts;</span>
+          <span *ngIf="fill < 100 && fill > 0" class="star">
+    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+  </span>
+        </ng-template>
+        <ngb-rating [(rate)]="currentRate"  [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+      </div>
+    </div>
+
+    <div class="card col-lg-6">
+      <img class="card-img-top" src="../../../assets/room2.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">Lemon tree Hotel <ngb-rating style="font-size: 20px" [rate]="4"></ngb-rating></h4>
+        <div class="row">
+          <p style="padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a>, you save <span style="color: limegreen">₹4000</span> </p>
+          <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+        </div>
+        <ng-template #t let-fill="fill">
+          <span *ngIf="fill === 100" class="star full">&hearts;</span>
+          <span *ngIf="fill === 0" class="star">&hearts;</span>
+          <span *ngIf="fill < 100 && fill > 0" class="star">
+    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+  </span>
+        </ng-template>
+        <ngb-rating [(rate)]="currentRate"  [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="card-deck">
+      <div class="card col-lg-6">
+        <img class="card-img-top" src="../../../assets/bed.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Novotel Hitec City <ngb-rating style="font-size: 20px" [rate]="5"></ngb-rating></h4>
+          <div class="row">
+            <p style="padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a>, you save <span style="color: limegreen">₹4000</span> </p>
+            <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+          </div>
+          <ng-template #t let-fill="fill">
+            <span *ngIf="fill === 100" class="star full">&hearts;</span>
+            <span *ngIf="fill === 0" class="star">&hearts;</span>
+            <span *ngIf="fill < 100 && fill > 0" class="star">
+    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+  </span>
+          </ng-template>
+          <ngb-rating [(rate)]="currentRate"  [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+        </div>
+      </div>
+
+      <div class="card col-lg-6">
+        <img class="card-img-top" src="../../../assets/room2.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Lemon tree Hotel <ngb-rating style="font-size: 20px" [rate]="4"></ngb-rating></h4>
+          <div class="row">
+            <p style="padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a>, you save <span style="color: limegreen">₹4000</span> </p>
+            <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+          </div>
+          <ng-template #t let-fill="fill">
+            <span *ngIf="fill === 100" class="star full">&hearts;</span>
+            <span *ngIf="fill === 0" class="star">&hearts;</span>
+            <span *ngIf="fill < 100 && fill > 0" class="star">
+    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+  </span>
+          </ng-template>
+          <ngb-rating [(rate)]="currentRate"  [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card-deck">
+      <div class="card col-lg-6">
+        <img class="card-img-top" src="../../../assets/bed.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Novotel Hitec City <ngb-rating style="font-size: 20px" [rate]="5"></ngb-rating></h4>
+          <div class="row">
+            <p style="padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a>, you save <span style="color: limegreen">₹4000</span> </p>
+            <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+          </div>
+          <ng-template #t let-fill="fill">
+            <span *ngIf="fill === 100" class="star full">&hearts;</span>
+            <span *ngIf="fill === 0" class="star">&hearts;</span>
+            <span *ngIf="fill < 100 && fill > 0" class="star">
+    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+  </span>
+          </ng-template>
+          <ngb-rating [(rate)]="currentRate"  [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+        </div>
+      </div>
+
+      <div class="card col-lg-6">
+        <img class="card-img-top" src="../../../assets/room2.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Lemon tree Hotel <ngb-rating style="font-size: 20px" [rate]="4"></ngb-rating></h4>
+          <div class="row">
+            <p style="padding-right: 120px">₹2599 not <a style="text-decoration: line-through; text-decoration-color: red">₹6599</a>, you save <span style="color: limegreen">₹4000</span> </p>
+            <button type="button" class="btn  btn-outline-danger btn-sm">Book</button>
+          </div>
+          <ng-template #t let-fill="fill">
+            <span *ngIf="fill === 100" class="star full">&hearts;</span>
+            <span *ngIf="fill === 0" class="star">&hearts;</span>
+            <span *ngIf="fill < 100 && fill > 0" class="star">
+    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+  </span>
+          </ng-template>
+          <ngb-rating [(rate)]="currentRate"  [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-text">
+    <span>All rights reserved with dayroom pvt ltd. </span>
+  </div>
+</footer>
+
+

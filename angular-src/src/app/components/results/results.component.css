@@ -1,0 +1,32 @@
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #d3d3d3;
+}
+.full {
+  color: red;
+}
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: red;
+}
+
+/*Hotel cards*/
+.card {
+  box-shadow: none;
+}
+
+.card-deck{
+  padding-bottom: 30px;
+}
+
+
+
+/*Footer*/
+.footer{
+  background-color: whitesmoke;
+  padding: 100px;
+}
